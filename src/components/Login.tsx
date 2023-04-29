@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import {useNavigate} from "react-router";
-import {Simulate} from "react-dom/test-utils";
-import submit = Simulate.submit;
+import schoolBus from "../assests/bus.png";
 
 
 const Login = () => {
@@ -18,15 +17,21 @@ const Login = () => {
     return (
         <div className={"login"}>
             <div>
-                <p className={"entry login-title"}>Parent Account Login</p>
-                <label className={"entry"}>Phone number: </label>
-                <input onChange={event => {
-                    console.log(event.target.value)
-                    setNumber(event.target.value)
-                }
-                } className={"entry tel"} type={"tel"} placeholder={"+971..."}/>
+                <div>
+                    <h2 className={"entry login-title"}>Parent Account Login</h2>
+                    <div style={{display: "flex", gap: "1rem"}}>
+                        <h3 className={"entry"}>Phone number: </h3>
+                        <input onChange={event => {
+                            console.log(event.target.value)
+                            setNumber(event.target.value)
+                        }
+                        } className={"entry tel"} type={"tel"} placeholder={"+971..."}/>
+                    </div>
+                </div>
+                <input onClick={onSubmit} className={"entry submit"} type={"submit"}/>
             </div>
-            <input onClick={onSubmit} className={"entry submit"} type={"submit"}/>
+            <img className={"bus"} src={schoolBus}/>
+
         </div>
     )
 }

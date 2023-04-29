@@ -8,14 +8,14 @@ function App() {
         <BrowserRouter>
             <div className="App">
 
-                <div className={"nav"}>
-                    <Link to={"/"} className={"title"}>Bus System</Link>
-                </div>
+                    <div className={"nav"}>
+                        <Link to={"/"} className={"title"}>Bus System</Link>
+                    </div>
 
-                <Routes>
-                    <Route path={"/"} element={<Login/>}/>
-                    <Route path={"/dashboard/:id"} element={<Dashboard/>}/>
-                </Routes>
+                    <Routes>
+                        <Route path={"/"} element={<Login/>}/>
+                        <Route path={"/dashboard/:id"} element={<Dashboard/>}/>
+                    </Routes>
 
 
             </div>
