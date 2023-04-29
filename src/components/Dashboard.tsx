@@ -10,7 +10,7 @@ const Dashboard = () => {
 
     useEffect(() => {
 
-        fetch("http://bus.uaeu.space/phone").then(value =>{
+        fetch("https://bus.uaeu.space/phone").then(value =>{
             value.json().then((json) => {
                 setEntered(json.includes(id!.toString()));
 
