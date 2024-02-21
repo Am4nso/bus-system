@@ -21,7 +21,7 @@ const Dashboard = () => {
 
     useEffect(() => {
 
-        fetch("http://bus.uaeu.space/students/phone/" + id).then(value =>{
+        fetch("https://bus.uaeu.space/students/phone/" + id).then(value =>{
 
             if (!value.ok) {
                 setStudent(undefined);
